@@ -381,7 +381,7 @@ class calvados_model:
 
         # take the numerical finite integral between 1 and 3 sigma to calculate
         # an interacion parameter
-        interaction_param = np.trapz(combo[s1:s3], x=r_angstroms[s1:s3])
+        interaction_param = np.trapezoid(combo[s1:s3], x=r_angstroms[s1:s3])
 
         # note we need to *10 to convert back to Angstroms
         return (interaction_param, combo, s1*10, s3*10, r*10)
